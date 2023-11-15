@@ -300,9 +300,6 @@
     <EmbeddedResource Include="GCSViews\InitialSetup.uk.resx">
       <DependentUpon>InitialSetup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GCSViews\ManualMode.resx">
-      <DependentUpon>ManualMode.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="GCSViews\SITL.uk.resx">
       <DependentUpon>SITL.cs</DependentUpon>
     </EmbeddedResource>
@@ -901,12 +898,6 @@
     <Compile Include="GCSViews\ConfigurationView\DeviceInfo.cs" />
     <Compile Include="GCSViews\ConfigurationView\DroneCANModel.cs" />
     <Compile Include="GCSViews\ConfigurationView\uitype.cs" />
-    <Compile Include="GCSViews\ManualMode.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GCSViews\ManualMode.Designer.cs">
-      <DependentUpon>ManualMode.cs</DependentUpon>
-    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Joystick\JoystickAxis.cs">
       <SubType>UserControl</SubType>

@@ -55,6 +55,7 @@ namespace MissionPlanner
             this.menu = new MissionPlanner.Controls.MyButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.status1 = new MissionPlanner.Controls.Status();
+            this.MenuManual = new System.Windows.Forms.ToolStripButton();
             this.MainMenu.SuspendLayout();
             this.CTX_mainmenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,6 +72,7 @@ namespace MissionPlanner
             this.MenuFlightPlanner,
             this.MenuInitConfig,
             this.MenuConfigTune,
+            this.MenuManual,
             this.MenuSimulation,
             this.MenuHelp,
             this.MenuConnect,
@@ -207,6 +209,7 @@ namespace MissionPlanner
             // 
             resources.ApplyResources(this.menu, "menu");
             this.menu.Name = "menu";
+            this.menu.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(87)))), ((int)(((byte)(4)))));
             this.menu.UseVisualStyleBackColor = true;
             this.menu.MouseEnter += new System.EventHandler(this.menu_MouseEnter);
             // 
@@ -223,6 +226,15 @@ namespace MissionPlanner
             resources.ApplyResources(this.status1, "status1");
             this.status1.Name = "status1";
             this.status1.Percent = 0D;
+            // 
+            // MenuManual
+            // 
+            this.MenuManual.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.MenuManual.Image = global::MissionPlanner.Properties.Resources.light_manual_icon;
+            resources.ApplyResources(this.MenuManual, "MenuManual");
+            this.MenuManual.Margin = new System.Windows.Forms.Padding(0);
+            this.MenuManual.Name = "MenuManual";
+            this.MenuManual.Click += new System.EventHandler(this.MenuManual_Click);
             // 
             // MainV2
             // 
@@ -264,5 +276,6 @@ namespace MissionPlanner
         public System.Windows.Forms.ToolStripButton MenuHelp;
         public System.Windows.Forms.ToolStripButton MenuArduPilot;
         public Controls.Status status1;
+        public System.Windows.Forms.ToolStripButton MenuManual;
     }
 }

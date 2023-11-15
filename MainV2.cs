@@ -4006,6 +4006,11 @@ namespace MissionPlanner
         private void MenuHelp_Click(object sender, EventArgs e)
         {
             MyView.ShowScreen("Help");
+        }        
+        
+        private void MenuManual_Click(object sender, EventArgs e)
+        {
+            MyView.ShowScreen("Manual");
         }
 
 
