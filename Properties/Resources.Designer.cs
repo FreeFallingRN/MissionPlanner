@@ -523,6 +523,16 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap dark_manual_icon {
+            get {
+                object obj = ResourceManager.GetObject("dark_manual_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap dark_simulation_icon {
             get {
                 object obj = ResourceManager.GetObject("dark_simulation_icon", resourceCulture);
@@ -1017,6 +1027,16 @@ namespace MissionPlanner.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap light_manual_icon {
+            get {
+                object obj = ResourceManager.GetObject("light_manual_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap light_simulation_icon {
             get {
                 object obj = ResourceManager.GetObject("light_simulation_icon", resourceCulture);
@@ -1139,21 +1159,23 @@ namespace MissionPlanner.Properties {
         ///      &lt;Y&gt;Long&lt;/Y&gt;
         ///      &lt;Z&gt;Alt&lt;/Z&gt;
         ///    &lt;/WAYPOINT&gt;
-        ///    &lt;SPLINE_WAYPOINT&gt;
-        ///      &lt;P1&gt;Delay&lt;/P1&gt;
+        ///    &lt;TAKEOFF&gt;
+        ///      &lt;P1&gt;&lt;/P1&gt;
         ///      &lt;P2&gt;&lt;/P2&gt;
         ///      &lt;P3&gt;&lt;/P3&gt;
         ///      &lt;P4&gt;&lt;/P4&gt;
-        ///      &lt;X&gt;Lat&lt;/X&gt;
-        ///      &lt;Y&gt;Long&lt;/Y&gt;
+        ///      &lt;X&gt;&lt;/X&gt;
+        ///      &lt;Y&gt;&lt;/Y&gt;
         ///      &lt;Z&gt;Alt&lt;/Z&gt;
-        ///    &lt;/SPLINE_WAYPOINT&gt;
-        ///    &lt;LOITER_TURNS&gt;
-        ///      &lt;P1&gt;Turns&lt;/P1&gt;
+        ///    &lt;/TAKEOFF&gt;
+        ///    &lt;RETURN_TO_LAUNCH&gt;
+        ///      &lt;P1&gt;&lt;/P1&gt;
         ///      &lt;P2&gt;&lt;/P2&gt;
-        ///      &lt;P3&gt;Radius&lt;/P3&gt;
+        ///      &lt;P3&gt;&lt;/P3&gt;
         ///      &lt;P4&gt;&lt;/P4&gt;
-        ///   [rest of string was truncated]&quot;;.
+        ///      &lt;X&gt;&lt;/X&gt;
+        ///      &lt;Y&gt;&lt;/Y&gt;
+        ///      &lt; [rest of string was truncated]&quot;;.
         /// </summary>
         public static string mavcmd {
             get {
@@ -1168,7 +1190,7 @@ namespace MissionPlanner.Properties {
         ///
         ///It includes both fixed wing (APM) and rotary wing (!ArduCopter) parameters. Some may only be relevant for one platform or another.
         ///
-        ///|| *EEPROM variable name* || *Min* || *Max* || *Default* || *Multiplier* || *Enabled (0 = no, 1 = yes)* [rest of string was truncated]&quot;;.
+        ///|| *EEPROM variable name* || *Min* || *Max* || *Default* || *Multiplier* || *Enabled (0 = no, 1 = [rest of string was truncated]&quot;;.
         /// </summary>
         public static string MAVParam {
             get {

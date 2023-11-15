@@ -163,6 +163,9 @@
   <data name="light_help_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\light_help_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="light_manual_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\light_manual_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="quadhover_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\quadhover_01.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -414,6 +417,9 @@
   </data>
   <data name="dark_help_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dark_help_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dark_manual_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dark_manual_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="help_text" xml:space="preserve">
     <value>{\rtf1\ansi\ansicpg1252\deff0\deflang3081\deflangfe3081{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}}
