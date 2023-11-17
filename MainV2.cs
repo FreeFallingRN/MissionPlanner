@@ -546,6 +546,8 @@ namespace MissionPlanner
         public GCSViews.FlightData FlightData;
 
         public GCSViews.FlightPlanner FlightPlanner;
+
+        public GCSViews.Manual Manual;
         GCSViews.SITL Simulation;
 
         private Form connectionStatsForm;
@@ -923,6 +925,8 @@ namespace MissionPlanner
                 FlightData = new GCSViews.FlightData();
                 log.Info("Create FP");
                 FlightPlanner = new GCSViews.FlightPlanner();
+                log.Info("Create Manual");
+                Manual = new GCSViews.Manual();
                 //Configuration = new GCSViews.ConfigurationView.Setup();
                 log.Info("Create SIM");
                 Simulation = new GCSViews.SITL();
@@ -3140,6 +3144,7 @@ namespace MissionPlanner
 
             MyView.AddScreen(new MainSwitcher.Screen("FlightData", FlightData, true));
             MyView.AddScreen(new MainSwitcher.Screen("FlightPlanner", FlightPlanner, true));
+            MyView.AddScreen(new MainSwitcher.Screen("Manual", Manual, true));
             MyView.AddScreen(new MainSwitcher.Screen("HWConfig", typeof(GCSViews.InitialSetup), false));
             MyView.AddScreen(new MainSwitcher.Screen("SWConfig", typeof(GCSViews.SoftwareConfig), false));
             MyView.AddScreen(new MainSwitcher.Screen("Simulation", Simulation, true));
