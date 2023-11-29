@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using Newtonsoft.Json;
 using System.IO;
+using MissionPlanner.HIL;
 
 namespace MissionPlanner.GCSViews.ConfigurationView
 {
@@ -262,18 +263,36 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void but_TestAll(object sender, EventArgs e)
         {
-            int speed = (int)NUM_thr_percent.Value;
+            int speed = 0;
             int time = (int)NUM_duration.Value;
 
             for (int i = 1; i <= motormax; i++)
             {
+                switch (i)
+                {
+                    case 1: // Motor A
+                        speed = (int)NUM_thr_percent_A.Value;
+                        break;
+                    case 2: // Motor B
+                        speed = (int)NUM_thr_percent_B.Value;
+                        break;
+                    case 3: // Motor C
+                        speed = (int)NUM_thr_percent_C.Value;
+                        break;
+                    case 4: // Motor D
+                        speed = (int)NUM_thr_percent_D.Value;
+                        break;
+                    default:
+                        speed = 15;
+                        break;
+                }
                 testMotor(i, speed, time);
             }
         }
 
         private void but_TestAllSeq(object sender, EventArgs e)
         {
-            int speed = (int)NUM_thr_percent.Value;
+            int speed = (int)NUM_thr_percent_A.Value;
             int time = (int)NUM_duration.Value;
 
             testMotor(1, speed, time, motormax);
@@ -289,11 +308,29 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void but_Click(object sender, EventArgs e)
         {
-            int speed = (int)NUM_thr_percent.Value;
             int time = (int)NUM_duration.Value;
             try
             {
                 var motor = (int)((MyButton)sender).Tag;
+                var speed = 0;
+                switch (motor)
+                {
+                    case 1: // Motor A
+                        speed = (int)NUM_thr_percent_A.Value;
+                        break;
+                    case 2: // Motor B
+                        speed = (int)NUM_thr_percent_B.Value;
+                        break;
+                    case 3: // Motor C
+                        speed = (int)NUM_thr_percent_C.Value;
+                        break;
+                    case 4: // Motor D
+                        speed = (int)NUM_thr_percent_D.Value;
+                        break;
+                    default:
+                        speed = 15;
+                        break;
+                }
                 this.testMotor(motor, speed, time);
             }
             catch (Exception ex)
@@ -348,9 +385,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 return;
             }
 
-            if (NUM_thr_percent.Value < 20)
+            if (NUM_thr_percent_A.Value < 20)
             {
-                var value = (int)NUM_thr_percent.Value + 2;
+                var value = (int)NUM_thr_percent_A.Value + 2;
                 if (InputBox.Show(Strings.ChangeThrottle, "Enter arm throttle % (deadzone + 2%)", ref value) == DialogResult.OK)
                 {
                     await MainV2.comPort.setParamAsync((byte)MainV2.comPort.sysidcurrent,
@@ -376,7 +413,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 return;
             }
 
-            if (NUM_thr_percent.Value < 20)
+            if (NUM_thr_percent_A.Value < 20)
             {
                 var value = (int)MainV2.comPort.MAV.param["MOT_SPIN_MIN"].Value + 3;
                 if (InputBox.Show(Strings.ChangeThrottle, "Enter min spin throttle % (arm min + 3%)", ref value) ==

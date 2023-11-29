@@ -29,35 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfigMotorTest));
-            this.NUM_thr_percent = new System.Windows.Forms.NumericUpDown();
+            this.NUM_thr_percent_A = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.NUM_duration = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NUM_thr_percent_D = new System.Windows.Forms.NumericUpDown();
+            this.NUM_thr_percent_C = new System.Windows.Forms.NumericUpDown();
+            this.NUM_thr_percent_B = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.FrameType = new System.Windows.Forms.Label();
+            this.FrameClass = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.but_mot_spin_min = new MissionPlanner.Controls.MyButton();
             this.label4 = new System.Windows.Forms.Label();
             this.but_mot_spin_arm = new MissionPlanner.Controls.MyButton();
-            this.FrameClass = new System.Windows.Forms.Label();
-            this.FrameType = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_A)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUM_duration)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_D)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_C)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_B)).BeginInit();
             this.SuspendLayout();
             // 
-            // NUM_thr_percent
+            // NUM_thr_percent_A
             // 
-            resources.ApplyResources(this.NUM_thr_percent, "NUM_thr_percent");
-            this.NUM_thr_percent.Minimum = new decimal(new int[] {
+            resources.ApplyResources(this.NUM_thr_percent_A, "NUM_thr_percent_A");
+            this.NUM_thr_percent_A.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
-            this.NUM_thr_percent.Name = "NUM_thr_percent";
-            this.NUM_thr_percent.Value = new decimal(new int[] {
-            5,
+            this.NUM_thr_percent_A.Name = "NUM_thr_percent_A";
+            this.NUM_thr_percent_A.Value = new decimal(new int[] {
+            20,
             0,
             0,
             0});
@@ -89,7 +98,7 @@
             0});
             this.NUM_duration.Name = "NUM_duration";
             this.NUM_duration.Value = new decimal(new int[] {
-            2,
+            5,
             0,
             0,
             0});
@@ -102,6 +111,12 @@
             // groupBox1
             // 
             resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Controls.Add(this.NUM_thr_percent_D);
+            this.groupBox1.Controls.Add(this.NUM_thr_percent_C);
+            this.groupBox1.Controls.Add(this.NUM_thr_percent_B);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.FrameType);
             this.groupBox1.Controls.Add(this.FrameClass);
             this.groupBox1.Controls.Add(this.label5);
@@ -110,12 +125,82 @@
             this.groupBox1.Controls.Add(this.but_mot_spin_arm);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.NUM_thr_percent);
+            this.groupBox1.Controls.Add(this.NUM_thr_percent_A);
             this.groupBox1.Controls.Add(this.NUM_duration);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.linkLabel1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // NUM_thr_percent_D
+            // 
+            resources.ApplyResources(this.NUM_thr_percent_D, "NUM_thr_percent_D");
+            this.NUM_thr_percent_D.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.NUM_thr_percent_D.Name = "NUM_thr_percent_D";
+            this.NUM_thr_percent_D.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // NUM_thr_percent_C
+            // 
+            resources.ApplyResources(this.NUM_thr_percent_C, "NUM_thr_percent_C");
+            this.NUM_thr_percent_C.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.NUM_thr_percent_C.Name = "NUM_thr_percent_C";
+            this.NUM_thr_percent_C.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // NUM_thr_percent_B
+            // 
+            resources.ApplyResources(this.NUM_thr_percent_B, "NUM_thr_percent_B");
+            this.NUM_thr_percent_B.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.NUM_thr_percent_B.Name = "NUM_thr_percent_B";
+            this.NUM_thr_percent_B.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // FrameType
+            // 
+            resources.ApplyResources(this.FrameType, "FrameType");
+            this.FrameType.Name = "FrameType";
+            // 
+            // FrameClass
+            // 
+            resources.ApplyResources(this.FrameClass, "FrameClass");
+            this.FrameClass.Name = "FrameClass";
             // 
             // label5
             // 
@@ -143,25 +228,18 @@
             this.but_mot_spin_arm.UseVisualStyleBackColor = true;
             this.but_mot_spin_arm.Click += new System.EventHandler(this.but_mot_spin_arm_Click);
             // 
-            // FrameClass
-            // 
-            resources.ApplyResources(this.FrameClass, "FrameClass");
-            this.FrameClass.Name = "FrameClass";
-            // 
-            // FrameType
-            // 
-            resources.ApplyResources(this.FrameType, "FrameType");
-            this.FrameType.Name = "FrameType";
-            // 
             // ConfigMotorTest
             // 
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.groupBox1);
             this.Name = "ConfigMotorTest";
-            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_A)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUM_duration)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_D)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_C)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_thr_percent_B)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +247,7 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown NUM_thr_percent;
+        private System.Windows.Forms.NumericUpDown NUM_thr_percent_A;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -182,5 +260,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label FrameType;
         private System.Windows.Forms.Label FrameClass;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown NUM_thr_percent_D;
+        private System.Windows.Forms.NumericUpDown NUM_thr_percent_C;
+        private System.Windows.Forms.NumericUpDown NUM_thr_percent_B;
     }
 }
